@@ -30,7 +30,7 @@ export function GraficoVendas({ produto }: GraficoVendasProps) {
                             <stop offset="100%" stopColor="rgba(237, 221, 83, 1)" />
                         </linearGradient>
                     </defs>
-                    <CartesianGrid stroke="#ccc" />
+                    <CartesianGrid strokeDasharray="3 3" stroke="#555" />
                     <XAxis dataKey="mes" />
                     <YAxis />
                     <Tooltip contentStyle={{ backgroundColor: "#0f172a", border: "none", color: "#fff" }}
