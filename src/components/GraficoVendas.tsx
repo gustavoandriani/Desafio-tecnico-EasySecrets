@@ -19,7 +19,7 @@ export function GraficoVendas({ produto }: GraficoVendasProps) {
 
     const dadosGrafico: VendaMensal[] = produtoData.vendas;
     return(
-        <div className="xs:w-screen md:w-[75%]">
+        <div className="sm:w-[100%] sm:h-[100%] md:w-screen md:h-full">
             <h2 className="text-[24px]">Vendas de {produto}</h2>
             <ResponsiveContainer height={400}>
                 <AreaChart data={dadosGrafico}>
