@@ -1,34 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { GraficoVendas } from "./components/GraficoVendas";
+import { BotaoProduto } from "./components/BotaoProduto";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [produto, setProduto] = useState("Refrigerante")
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="h-screen text-center p-2">
+      <h1 className="text-[32px] font-bold">Vendas Mensais</h1>
+      <div className="flex sm:flex-col sm:flex-col md:flex-row bg-gray-800 rounded-[30px] p-5 align-center justify-evenly">
+        <GraficoVendas produto={produto} />
+        <div className="md:w-fit sm:w-[100%] h-fit flex flex-col">
+          <p>Escolha o produto desejado</p>
+          <div className="flex md:flex-col sm:flex-row sm:justify-center">
+            <BotaoProduto nome="Refrigerante" selecionado={produto} aoSelecionar={setProduto} />
+            <BotaoProduto nome="Suco" selecionado={produto} aoSelecionar={setProduto} />
+            <BotaoProduto nome="Salgadinho" selecionado={produto} aoSelecionar={setProduto} />
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
