@@ -1,5 +1,5 @@
 import React from "react";
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
 import data from "../data/vendas.json"
 import CustomTooltip from "./CustomTooltip";
 
@@ -58,7 +58,7 @@ const GraficoPizza: React.FC = () => {
 
   return (
     <div className="sm:w-[100%] sm:h-[100%] md:w-full md:h-full">
-      <h2 className="text-[24px]">Total de Vendas</h2>
+      <h2 className="text-[24px]">Porcentagem de Vendas</h2>
       <ResponsiveContainer height={400}>
         <PieChart>
           <Pie
@@ -79,6 +79,7 @@ const GraficoPizza: React.FC = () => {
             ))}
           </Pie>
           <Tooltip content={<CustomTooltip />} />
+          <Legend verticalAlign="bottom" align="center" wrapperStyle={{ color: "#fff" }}/>
         </PieChart>
       </ResponsiveContainer>
     </div>
