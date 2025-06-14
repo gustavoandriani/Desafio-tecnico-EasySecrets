@@ -82,15 +82,6 @@ src/
 
 ---
 
-## 📌 Futuras melhorias sugeridas
-
-- Filtro por período (semana, mês, ano).
-- Exportação dos gráficos (PDF ou imagem).
-- Modo apresentação (fullscreen).
-- Integração com API real de vendas.
-
----
-
 ## 👤 Autor
 
 Desenvolvido por **Gustavo José Andriani**  
