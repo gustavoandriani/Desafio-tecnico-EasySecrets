@@ -51,7 +51,7 @@ const CustomLabel: React.FC<any> = ({
   );
 };
 
-const COLORS = ["#2563eb", "#10b981", "#facc15", "#f97316", "#ec4899"];
+const COLORS = ["#2563eb", "#10b981", "#f97316"];
 
 const GraficoPizza: React.FC = () => {
   const produtoData = agruparTotalPorProduto(data);
