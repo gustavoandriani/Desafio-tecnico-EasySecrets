@@ -20,9 +20,9 @@ export default function GraficoBars() {
   const dados = transformarDados();
 
   return (
-    <div className="sm:w-[100%] sm:h-[100%] md:w-full md:h-full">
-        <h2 className="text-[24px]">Comparação de vendas mensal</h2>
-        <ResponsiveContainer height={400}>
+    <div className="md:w-[100%]">
+      <h2 className="text-[24px]">Comparação de vendas mensal</h2>
+      <ResponsiveContainer minHeight={100} maxHeight={400} height={400}>
         <BarChart data={dados}>
             <XAxis dataKey="mes" />
             <YAxis />
@@ -32,7 +32,7 @@ export default function GraficoBars() {
             <Bar dataKey="Suco" fill="#22c55e" />
             <Bar dataKey="Salgadinho" fill="#facc15" />
         </BarChart>
-        </ResponsiveContainer>
+      </ResponsiveContainer>
     </div>
   );
 }

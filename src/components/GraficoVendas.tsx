@@ -20,9 +20,9 @@ export function GraficoVendas({ produto }: GraficoVendasProps) {
 
     const dadosGrafico: VendaMensal[] = produtoData.vendas;
     return(
-        <div className="sm:w-[100%] sm:h-[100%] md:w-full md:h-full">
+        <div className="md:w-[100%]">
             <h2 className="text-[24px]">Vendas de {produto}</h2>
-            <ResponsiveContainer height={400}>
+            <ResponsiveContainer minHeight={100} maxHeight={400} height={400}>
                 <AreaChart data={dadosGrafico}>
                     <defs>
                         <linearGradient id="colorQuantidade" x1="0" y1="0" x2="1" y2="0">
