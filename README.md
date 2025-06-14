@@ -8,7 +8,7 @@ Este projeto é um painel visual de vendas mensais que apresenta gráficos inter
 ## 💻 Acesse Já!
 **😱 *Do computador ou do celular!!***  
 **👇 Você pode acessar clicando no link abaixo.**  
-🔗 [Desafio EasySecrets](http://www.desafiotecnico-easysecrets.netlify.app)  
+🔗 [Desafio EasySecrets](https://desafiotecnico-easysecrets.netlify.app/)  
 [![Netlify Status](https://api.netlify.com/api/v1/badges/58e066bc-8073-4e93-9da8-fd317320230d/deploy-status)](https://app.netlify.com/projects/desafiotecnico-easysecrets/deploys)
 
 ---
