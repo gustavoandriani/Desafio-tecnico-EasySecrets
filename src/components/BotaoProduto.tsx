@@ -1,12 +1,11 @@
-import { AiOutlineCaretRight } from "react-icons/ai";
-
 type BotaoProdutoProps = {
+  icone: React.ReactElement;
   nome: string;
   selecionado: string;
   aoSelecionar: (nome: string) => void;
 };
 
-export function BotaoProduto({ nome, selecionado, aoSelecionar }: BotaoProdutoProps) {
+export function BotaoProduto({ icone, nome, selecionado, aoSelecionar }: BotaoProdutoProps) {
   const isAtivo = nome === selecionado;
 
   return (
@@ -15,7 +14,7 @@ export function BotaoProduto({ nome, selecionado, aoSelecionar }: BotaoProdutoPr
       className={`flex mt-5 sm:ml-5 p-5 py-3 rounded-full font-semibold text-black transition duration-600 ease-in-out cursor-pointer 
         ${isAtivo ? "bg-gradient-to-r from-cyan-700 via-green-500 to-yellow-400 shadow-lg" : "bg-gray-500 hover:bg-gray-600"}`}
     >
-      <AiOutlineCaretRight className="mt-1" />
+      {icone}
       {nome}
     </button>
   );

@@ -1,5 +1,6 @@
 import {  AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
 import data from '../data/vendas.json'
+import CustomTooltip from "./CustomTooltip";
 
 type VendaMensal = { 
     mes: string;
@@ -19,7 +20,7 @@ export function GraficoVendas({ produto }: GraficoVendasProps) {
 
     const dadosGrafico: VendaMensal[] = produtoData.vendas;
     return(
-        <div className="sm:w-[100%] sm:h-[100%] md:w-screen md:h-full">
+        <div className="sm:w-[100%] sm:h-[100%] md:w-full md:h-full">
             <h2 className="text-[24px]">Vendas de {produto}</h2>
             <ResponsiveContainer height={400}>
                 <AreaChart data={dadosGrafico}>
@@ -33,8 +34,7 @@ export function GraficoVendas({ produto }: GraficoVendasProps) {
                     <CartesianGrid strokeDasharray="3 3" stroke="#555" />
                     <XAxis dataKey="mes" />
                     <YAxis />
-                    <Tooltip contentStyle={{ backgroundColor: "#0f172a", border: "none", color: "#fff" }}
-                        labelStyle={{ color: "#94a3b8" }} />
+                    <Tooltip content={<CustomTooltip />} />
                     <Area type="monotone" dataKey="quantidade" stroke="rgba(42, 123, 155, 1)" fill="url(#colorQuantidade)" strokeWidth={2} />
                 </AreaChart>
             </ResponsiveContainer>

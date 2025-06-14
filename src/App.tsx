@@ -2,22 +2,23 @@ import { useState } from "react";
 import { GraficoVendas } from "./components/GraficoVendas";
 import { BotaoProduto } from "./components/BotaoProduto";
 import { FaGithub } from "react-icons/fa";
+import { LuCupSoda } from "react-icons/lu";
+import { GiManualJuicer, GiNachos } from "react-icons/gi";
 
 function App() {
   const [produto, setProduto] = useState("Refrigerante")
 
   return (
-    <div className="h-screen text-center p-5 bg-gray-800">
+    <div className="h-screen flex flex-col text-center p-5 bg-gray-800">
       <h1 className="text-[32px] font-bold">Vendas Mensais</h1>
-      <div className="flex sm:flex-col sm:flex-col md:flex-row bg-gray-800 rounded-[30px] p-5 align-center justify-evenly bg-gray-900 text-white border border-gray-700
-        hover:bg-gray-800 transition duration-200">
+      <div className="w-[60%] ml-auto mr-auto mt-5 flex sm:flex-col sm:flex-col md:flex-row bg-gray-800 rounded-[30px] p-5 align-center justify-evenly bg-gray-900 text-white border border-gray-700 transition duration-200">
         <GraficoVendas produto={produto} />
-        <div className="md:w-fit sm:w-[100%] flex flex-col">
+        <div className="md:w-fit sm:w-[100%] mt-auto mb-auto flex flex-col">
           <p>Escolha o produto desejado</p>
           <div className="flex md:flex-col sm:flex-row sm:justify-center">
-            <BotaoProduto nome="Refrigerante" selecionado={produto} aoSelecionar={setProduto} />
-            <BotaoProduto nome="Suco" selecionado={produto} aoSelecionar={setProduto} />
-            <BotaoProduto nome="Salgadinho" selecionado={produto} aoSelecionar={setProduto} />
+            <BotaoProduto icone={<LuCupSoda className="mt-[2px] mr-1"/>} nome="Refrigerante" selecionado={produto} aoSelecionar={setProduto} />
+            <BotaoProduto icone={<GiManualJuicer className="mt-[2px] mr-1"/>} nome="Suco" selecionado={produto} aoSelecionar={setProduto} />
+            <BotaoProduto icone={<GiNachos className="mt-[2px] mr-1"/>} nome="Salgadinho" selecionado={produto} aoSelecionar={setProduto} />
           </div>
         </div>
       </div>
