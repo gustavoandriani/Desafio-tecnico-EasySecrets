@@ -71,7 +71,7 @@ const GraficoPizza: React.FC = () => {
             dataKey="valor"
             nameKey="nome"
           >
-            {produtoData.map((entry, index) => (
+            {produtoData.map((_, index) => (
               <Cell
                 key={`cell-${index}`}
                 fill={COLORS[index % COLORS.length]}
