@@ -74,7 +74,7 @@ function App() {
           Desafio EasySecrets realizado por: <i>Gustavo José Andriani</i> — Saiba mais em{" "}
           <a
             className="inline-flex items-center gap-1 text-blue-400 hover:underline relative top-[4px]"
-            href="https://github.com/gustavoandriani/Desafio-tecnico---EasySecrets"
+            href="https://github.com/gustavoandriani/Desafio-tecnico-EasySecrets"
             target="_blank"
             rel="noopener noreferrer"
           >

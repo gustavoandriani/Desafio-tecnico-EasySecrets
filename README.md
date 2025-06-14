@@ -1,54 +1,98 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📊 Dashboard de Vendas — Desafio EasySecrets
 
-Currently, two official plugins are available:
+Este projeto é um painel visual de vendas mensais que apresenta gráficos interativos e responsivos, desenvolvido com **React + TypeScript**. Permite alternar entre diferentes visualizações de dados (área, barras e pizza), com comparação e detalhamento por produto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Como rodar o projeto localmente
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/gustavoandriani/Desafio-tecnico-EasySecrets.git
+   ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+2. **Acesse o diretório do projeto:**
+   ```bash
+   cd Desafio-tecnico-EasySecrets
+   ```
+
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   # ou
+   yarn
+   ```
+
+4. **Inicie o projeto:**
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+
+5. Acesse em: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🧠 Decisões técnicas
+
+### 📚 Escolha das bibliotecas
+
+| Biblioteca       | Justificativa                                                                 |
+|------------------|-------------------------------------------------------------------------------|
+| **React** + **TypeScript** | Base moderna e tipada para melhor organização e segurança de tipos. |
+| **Vite**         | Ferramenta de build rápida e moderna, com hot reload nativo.                  |
+| **Recharts**     | Biblioteca robusta e declarativa para gráficos interativos e responsivos.     |
+| **react-icons**  | Para inclusão rápida de ícones vetoriais em SVG.                              |
+| **Tailwind CSS** | Permite estilização ágil e responsiva com classes utilitárias, ideal para prototipagem rápida. |
+
+---
+
+### 🗂️ Estrutura de pastas
+
+```
+src/
+│
+├── components/              # Componentes reutilizáveis e gráficos
+│   ├── BotaoProduto.tsx     # Botão customizado com ícones e destaque
+│   ├── CustomTooltip.tsx    # Tooltip personalizada para todos os gráficos
+│   ├── GraficoBars.tsx      # Gráfico de barras para comparação entre produtos
+│   ├── GraficoPizza.tsx     # Gráfico de pizza com rótulos percentuais
+│   └── GraficoVendas.tsx    # Gráfico de área detalhado por produto
+│
+├── data/                    # Dados simulados para o projeto
+│   └── vendas.json          # Dataset de vendas mensais por produto
+│
+├── App.tsx                  # Componente principal e layout da aplicação
+└── main.tsx                 # Entrada principal da aplicação
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 💡 Diferenciais implementados
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- ✅ **Três tipos de visualizações**: área (por produto), barras (comparativo) e pizza (distribuição percentual).
+- ✅ **Tooltip customizado** com visual escuro e dados formatados.
+- ✅ **Componente de botão reutilizável** com destaque visual do item selecionado.
+- ✅ **Gráficos responsivos** com `ResponsiveContainer` do Recharts.
+- ✅ **Rótulos percentuais personalizados** no gráfico de pizza.
+- ✅ **Transição suave de gráficos** com botão de alternância.
+- ✅ **Design mobile-first** usando Tailwind com boas práticas responsivas.
+
+---
+
+## 📌 Futuras melhorias sugeridas
+
+- Filtro por período (semana, mês, ano).
+- Exportação dos gráficos (PDF ou imagem).
+- Modo apresentação (fullscreen).
+- Integração com API real de vendas.
+
+---
+
+## 👤 Autor
+
+Desenvolvido por **Gustavo José Andriani**  
+🔗 [LinkedIn](https://www.linkedin.com/in/gustavoandriani)  
+🔗 [GitHub](https://github.com/gustavoandriani)
